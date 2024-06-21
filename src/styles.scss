@@ -1,0 +1,45 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;700;900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.pad-70 {
+    padding: 0 70px;
+}
+
+body {
+    position: relative;
+    background-image: url('../src/assets/academia.png'); // Substitua pelo caminho da sua imagem
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 10, 20, 0.5); // Azul com 50% de opacidade
+        z-index: 1;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 2; // Para garantir que o conteúdo esteja acima do overlay
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+    margin-top: 20px;
+}

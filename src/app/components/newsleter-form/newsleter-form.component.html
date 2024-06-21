@@ -1,0 +1,19 @@
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Transforme Seu Corpo e Sua Vida com Nossa Consultoria Fitness Personalizada
+        </h3>
+        <p>Você está pronto para atingir seus objetivos de saúde e bem-estar? Nossa consultoria fitness oferece um plano
+            personalizado que combina treino, nutrição e acompanhamento para garantir que você obtenha os melhores
+            resultados.
+        </p>
+    </div>
+    <form [formGroup]="newsleterForm" (ngSubmit)="onSubmit()">
+        <label for="name">Nome</label>
+        <input id="name" formControlName="name" />
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" />
+        <btn-primary btn-text="INSCREVA-SE" variant="secondary" (click)="onSubmit()"
+            [disabled]="!newsleterForm.valid"></btn-primary>
+    </form>
+</section>

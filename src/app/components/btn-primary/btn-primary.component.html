@@ -1,0 +1,4 @@
+<button (click)="submit()" class="btn" [class]="variant" [disabled]="disabled">
+    <ng-container *ngIf="!loading">{{ btnText }}</ng-container>
+    <ng-container *ngIf="loading">carregando...</ng-container>
+</button>
